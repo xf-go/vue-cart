@@ -3,7 +3,9 @@ new Vue({
     data: {
         totalMoney: 0,
         productList: [],
-        checkAllFlag: false
+        checkAllFlag: false,
+        delFlag: false,
+        curProduct: '',
     },
     // 局部过滤器
     filters: {
@@ -61,6 +63,15 @@ new Vue({
                     this.totalMoney += item.productPrice * item.productQuentity;
                 }
             })
+        },
+        delConfirm: function(item) {
+            this.delFlag = true;
+            this.curProduct = item;
+        },
+        delProduct: function() {
+            let index = this.productList.indexOf(this.curProduct);
+            this.productList.splice(index, 1);
+            this.delFlag = false;
         }
     }
 })
