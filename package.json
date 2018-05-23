@@ -1,0 +1,12 @@
+{
+  "name": "vue-cart",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "xufei",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "vue": "^2.5.16",
+    "vue-axios": "^2.1.1"
+  }
+}
